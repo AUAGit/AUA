@@ -1,0 +1,55 @@
+/* TEAM */
+
+Lead Designer: 
+Jonathan Powell-Williams
+powellwilliamsjonathan@gmail.com
+https://www.jonpowwil.com/
+https://www.linkedin.com/in/jonpowwil/
+
+Backup Designer: 
+Logan Allen
+loganallenmtg@gmail.com
+https://kooliocode.github.io/Log-The-Site/
+https://www.linkedin.com/in/logan-allen-wrk/
+
+                        
+
+
+                            
+
+                
+                    
+
+                    
+
+
+                            
+/* THANKS */
+
+                            
+Name: name or url
+
+                        
+
+                
+                    
+
+                    
+
+
+                            
+/* SITE */
+
+                            
+Last update: 2026/03/21 
+
+                            
+Standards: HTML5, CSS3,..
+
+                            
+Components: Modernizr, jQuery, etc.
+
+                            
+Software: Software used for the development
+    
+                        
