@@ -1,7 +1,7 @@
 /* JS Document for AU Autosports website */
 
 /*js comment it out if ur working locally man*/
-/**/
+/*
 
   if (window.location.href.endsWith(".html")) {
     window.location.href = window.location.href.replace(".html", "");
@@ -10,6 +10,7 @@
   if (window.location.href.endsWith("index.html")) {
     window.location.href = window.location.href.replace("index.html", "");
   }
+
 
 
 /* disable animations until page is fully loaded to prevent eye strain */
@@ -25,7 +26,7 @@ window.addEventListener("load", () => {
       duration: 1250, 
     });
 
-    Aos.refresh();
+    AOS.refresh();
 });
 
 
@@ -197,20 +198,21 @@ if ( document.URL.includes("gallery") ) {
 }
 
 
-/*
-require(['fs'], function (fs) {
- 
-  fs.readdirSync(".assets/placeholders/").forEach(file => {
-    //Print file name
-    document.createElement('span')
+if(document.URL ==="http://auautosport.com"||document.URL ==="http://auautosport.com/index.html"){
+  const landingScroll = () => {
 
-    /*
-    Run this to print the file contents
-    console.log(readFileSync(".levels/" + file, {encoding: "utf8"}))
-    *//*
-  })
-});
-*/
+    const landingButton = document.querySelector('.landing-button')
+
+
+    landingButton.addEventListener('click', () => {
+      landingButton.classList.remove('aos-animate')
+      slowScrollTo(document.getElementById('scrollthing'), 2000,96);
+
+    });
+  }
+  landingScroll();
+
+}
 
 // Custom slow scroll function
 function slowScrollTo(element, duration = 2000, offset) {
@@ -248,31 +250,19 @@ function slowScrollTo(element, duration = 2000, offset) {
   requestAnimationFrame(animation);
 }
 
-const landingScroll = () => {
-
-  const landingButton = document.querySelector('.landing-button')
-
-
-  landingButton.addEventListener('click', () => {
-    landingButton.classList.remove('aos-animate')
-    slowScrollTo(document.getElementById('scrollthing'), 2000,96);
-
-  });
-}
-landingScroll();
 
 
 
 
-const counters = document.querySelectorAll(".about-us-counter span");
-const container = document.querySelectorAll(".about-us-counter");
+const counters = document.querySelectorAll(".counter-num");
+const container = document.querySelector(".about-us-counter");
 
 let activated = false;
 
-window.addEventListener(scroll, () => {
-
-  if( pageYOffset>container.offsetTop - container.offsetheight - 200 && activated === false){
-     
+window.addEventListener('scroll', () => {
+  
+  if( pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false){
+    activated = true;
     counters.forEach(counter => {
 
       counters.innerText = 0;
@@ -285,40 +275,19 @@ window.addEventListener(scroll, () => {
         if(count < target){
           count++;
           counter.innerText = count;
-          setTimeout(updateCount,10);
+          setTimeout(updateCount,20);
         } else{
           counter.innerText = target;
 
         }
       }
       updateCount();
-      activated=true;
+     
     });
-  } else if ( pageYOffset < container.offsetTop - container.offsetHeight - 500 || pageYOffset === 0 && activated === true){
-    counters.forEach(counter => {
-      counter.innerText = 0;
-    });
+  } 
+ 
 
-    activated = false;
-  }
-  
 });
-
-let valueDisplays = document.querySelectorAll(".counter span");
-let interval = 1000;
-console.log(valueDisplays);
-valueDisplays.forEach((valueDisplay) => {
-  let startValue =0;
-  let endValue = parseInt(valueDisplay.getAttribute ("data-count"));
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(function(){
-    startValue += 1
-    valueDisplay.textContent = startValue;
-    if(startValue == endValue){
-      clearInterval(counter);
-    }
-  }, duration)
-})
 
 
 
