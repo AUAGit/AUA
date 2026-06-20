@@ -318,7 +318,7 @@ nav {
 .landing-header-container {
 
   grid-column: -1/1;
-  height: calc(100dvh - 96px) !important;
+  height: calc(100dvh - 90px) !important;
 
 }
 
@@ -628,7 +628,7 @@ nav {
 .page-header.about-us{
   background-image: url("../assets/placeholders/Aaron_Alec_Tabling.jpg");
   grid-column: 1/-1;
-  height: calc(100dvh - 96px - 2em) !important;
+  height: calc(100dvh - 90px - 2em) !important;
   background-position: center;
   background-size: cover;
   color: #FFF;
@@ -776,7 +776,7 @@ nav {
   grid-column: 2/14;
   
    
-  height: calc(100vh - 96px - 4em);
+  height: calc(100vh - 90px - 4em);
 
    
     
@@ -797,7 +797,7 @@ nav {
 .carousel-item {
   flex-shrink: 0;
   width: 80%;
-  height: calc(100vh - 96px - 4em);
+  height: calc(100vh - 90px - 4em);
 
   background-color: #FFF;
 
@@ -1809,9 +1809,9 @@ and (max-width : 750px){
   
   .carousel-item {
     
-    height: calc(80vh - 96px - 4em);
-    margin-top: calc(((100vh - 96px - 4em) - (80vh - 96px - 4em)) / 2) ;
-    margin-bottom: calc(((100vh - 96px - 4em) - (80vh - 96px - 4em)) / 2)  ;
+    height: calc(80vh - 90px - 4em);
+    margin-top: calc(((100vh - 90px - 4em) - (80vh - 90px - 4em)) / 2) ;
+    margin-bottom: calc(((100vh - 90px - 4em) - (80vh - 90px - 4em)) / 2)  ;
     
   }
 
