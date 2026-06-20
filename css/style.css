@@ -88,7 +88,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 300;
-  
+  height: 90px;
 }
 
 .nav-container { 
@@ -98,8 +98,7 @@ nav {
   display: flex; 
   grid-column: 2/14;
   justify-content: space-between;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  height: 90px;
   position: sticky;
   top: 0;
   
@@ -109,10 +108,10 @@ nav {
 
   align-items: center;
   display: flex;
-  height: 4em;
+  height: 70%;
   justify-content: left;
   margin: 0;
-  top: 1em;
+ 
 
 }
 
@@ -123,7 +122,7 @@ nav {
   height: 100%;
   justify-content: left;
   margin: 0;
-  padding: 1em;
+  padding-left: 1em;
   user-select:none;
 }
 
@@ -1731,8 +1730,7 @@ and (max-width : 750px){
     align-content: stretch;
     justify-content: space-between;
     z-index: 500;
-    margin-top: 3.5px;
-    margin-bottom: 3.5px;
+    height: 89px;
   }
 
   .nav-logo {
@@ -1761,11 +1759,11 @@ and (max-width : 750px){
     background-color: var(--mainPageColor);
     display: block;
     flex-direction: column;
-    height: calc(100dvh - 89px - 1em);
+    height: calc(100dvh - 90px);
     justify-content: space-evenly;
     position: absolute;
     right: 0px;
-    top:  calc(89px - 1em);
+    top:  calc(90px);
     width: 100dvw;
     z-index: 10;
     padding-bottom: 1em;
@@ -1898,9 +1896,9 @@ and (max-width : 1048px) and (min-width: 930px) {
   
   .landing-button {
 
-    width: 10%;
-    border-radius: 3em;
-    left: calc((100% - 10%) / 2);
+    width: 20%;
+   
+    left: calc((100% - 20%) / 2);
   }
 }
 
@@ -1915,7 +1913,7 @@ and (max-width : 930px) {
   .landing-button {
 
     width: 25%;
-    border-radius: 2em;
+  
     left: calc((100% - 25%) / 2);
   }
 }
@@ -1930,10 +1928,10 @@ and (max-width : 800px) {
   }
   .landing-button {
 
-    width: 50%;
-    border-radius: 1em;
-    left: calc((100% - 50%) / 2);
-    height: 10dvh;
+    width: 30%;
+   
+    left: calc((100% - 30%) / 2);
+    
   }
 
   .landing-button-text p{
