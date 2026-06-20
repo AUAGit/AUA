@@ -253,42 +253,42 @@ function slowScrollTo(element, duration = 2000, offset) {
 
 
 
+if ( document.URL.includes("about") ) {
+  const counters = document.querySelectorAll(".counter-num");
+  const container = document.querySelector(".about-us-counter");
 
-const counters = document.querySelectorAll(".counter-num");
-const container = document.querySelector(".about-us-counter");
+  let activated = false;
 
-let activated = false;
+  window.addEventListener('scroll', () => {
+    
+    if( pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false){
+      activated = true;
+      counters.forEach(counter => {
 
-window.addEventListener('scroll', () => {
-  
-  if( pageYOffset > container.offsetTop - container.offsetHeight - 200 && activated === false){
-    activated = true;
-    counters.forEach(counter => {
+        counters.innerText = 0;
 
-      counters.innerText = 0;
+        let count = 0;
 
-      let count = 0;
+        function updateCount(){
+          const target = parseInt(counter.dataset.count);
 
-      function updateCount(){
-        const target = parseInt(counter.dataset.count);
+          if(count < target){
+            count++;
+            counter.innerText = count;
+            setTimeout(updateCount,20);
+          } else{
+            counter.innerText = target;
 
-        if(count < target){
-          count++;
-          counter.innerText = count;
-          setTimeout(updateCount,20);
-        } else{
-          counter.innerText = target;
-
+          }
         }
-      }
-      updateCount();
-     
-    });
-  } 
- 
+        updateCount();
+      
+      });
+    } 
+  
 
-});
-
+  });
+}
 
 
 
