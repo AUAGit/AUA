@@ -198,7 +198,7 @@ if ( document.URL.includes("gallery") ) {
 }
 
 
-if(document.URL ==="http://auautosport.com"||document.URL ==="http://auautosport.com/index.html"){
+if(document.URL ==="https://auautosport.com"||document.URL ==="https://auautosport.com/index.html"){
   const landingScroll = () => {
 
     const landingButton = document.querySelector('.landing-button')
