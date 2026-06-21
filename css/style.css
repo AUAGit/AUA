@@ -563,6 +563,7 @@ nav {
 
 .landing-page-learn-more-header-container{
   height: 25%;
+  width: 100%;
 }
 .page-header.learn-more{
   text-wrap: nowrap;
@@ -595,17 +596,19 @@ nav {
 
 .landing-page-learn-more-pic-container{
   height: 50%;
+  width: 100%;
 }
 
 .landing-page-learn-more div img{
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 1em;
 }
 
 
 .landing-page-learn-more-button-container{
   height: 25%;
+  width: 100%;
 }
 .landing-page-learn-more-button{
   display: block;
