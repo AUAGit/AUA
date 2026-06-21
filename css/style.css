@@ -561,6 +561,9 @@ nav {
   grid-column: 1/-1;
 }
 
+.landing-page-learn-more-header-container{
+  height: 25%;
+}
 .page-header.learn-more{
   text-wrap: nowrap;
   grid-column: 1/-1;
@@ -590,6 +593,10 @@ nav {
   height: fit-content;
 }
 
+.landing-page-learn-more-pic-container{
+  height: 50%;
+}
+
 .landing-page-learn-more div img{
   width: 100%;
   height: auto;
@@ -597,7 +604,9 @@ nav {
 }
 
 
-
+.landing-page-learn-more-button-container{
+  height: 25%;
+}
 .landing-page-learn-more-button{
   display: block;
   background-color: #e86100;
