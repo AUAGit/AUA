@@ -556,7 +556,7 @@ nav {
   display: flex;
   background: var(--mainPageColor);
   background: linear-gradient(180deg, var(--mainPageColorT) 0%, var(--mainPageColor) 100%);
-  height: calc(100dvh - 3px - 3em);
+  height: calc(100dvh - 90px);
   width: 100%;
   grid-column: 1/-1;
 }
@@ -571,7 +571,7 @@ nav {
 
 
 .landing-page-learn-more{
-  height: calc(100dvh - 3px - 3em);
+  height: calc(100dvh - 90px);
   background-color: var(--mainPageColor);
   grid-column: 1/-1;
   display: grid;
