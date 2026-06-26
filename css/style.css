@@ -1247,7 +1247,7 @@ input[type=submit]:hover {
 
 
 
-.sponsor-tier-container{
+.donor-tier-container{
   grid-column: 2/14;
   display: flex;
   align-items: center;
@@ -1259,12 +1259,12 @@ input[type=submit]:hover {
 }
 
 
-.sponsor-tier-container img{
+.donor-tier-container img{
   width: 100%;
   padding-top: 1em;
   padding-bottom: 1em;
 }
-.our-sponsors{
+.our-donors{
   grid-column: 2/14;
   display: flex;
   align-items: center;
@@ -1273,13 +1273,13 @@ input[type=submit]:hover {
   flex-direction: column;
   width: 100%;
 }
-.sponsor-container{
+.donor-container{
   display: flex;
   flex-direction: row;
   padding-bottom: 1em;
   padding-top: 1em;
 }
-.sponsor-img{
+.donor-img{
   width: 25%;
   padding-right: 10%;
   display: flex;
@@ -1287,7 +1287,7 @@ input[type=submit]:hover {
   object-fit: cover;
   
 }
-.sponsor-img img{
+.donor-img img{
   width: 100%;
   height: fit-content;
   display: flex;
@@ -1295,21 +1295,21 @@ input[type=submit]:hover {
   align-self: center;
 }
 
-.sponsor-link a:link,.sponsor-link a:visited{
+.donor-link a:link,.donor-link a:visited{
   color: var(--auburnOrange);
 }
 
-.sponsor-text{
+.donor-text{
   width: 65%;
 }
-.sponsor-spacer{
+.donor-spacer{
   width: 100%;
   place-content: center;
   display: flex ;
   padding-top: 1em;
   padding-bottom: 1em;
 }
-.sponsor-spacer hr{
+.donor-spacer hr{
   height: 2px;
   color: #e86100;
   background-color: #e86100;
