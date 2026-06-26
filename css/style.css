@@ -591,7 +591,7 @@ nav {
   align-content: center ;
   width: 100%;
   grid-column: 3/13;
-  height: fit-content;
+  
 }
 
 .landing-page-learn-more-pic-container{
@@ -799,7 +799,7 @@ nav {
 .carousel-list {
   display: flex;
   gap: 8px;
-  padding: 1em;
+
 
   list-style: none;
   overflow-x: scroll;
@@ -1255,10 +1255,14 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+  
 }
+
 
 .sponsor-tier-container img{
   width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .our-sponsors{
   grid-column: 2/14;
@@ -1268,6 +1272,52 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+}
+.sponsor-container{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.sponsor-img{
+  width: 25%;
+  padding-right: 10%;
+  display: flex;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  
+}
+.sponsor-img img{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+.sponsor-link a:link,.sponsor-link a:visited{
+  color: var(--auburnOrange);
+}
+
+.sponsor-text{
+  width: 65%;
+}
+.sponsor-spacer{
+  width: 100%;
+  place-content: center;
+  display: flex ;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.sponsor-spacer hr{
+  height: 2px;
+  color: #e86100;
+  background-color: #e86100;
+  width: 75%;
+  border-width: 0px;
+
+  
+  
 }
 
 /* Schedule Pages Styles */
