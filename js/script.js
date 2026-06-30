@@ -159,7 +159,7 @@ const modeToggle = () => {
 }
 modeToggle();
 
-if ( document.URL.includes("gallery") && document.URL == "https://auautosport.com/gallery.html" ) {
+if (document.URL == "https://auautosport.com/gallery.html") {
   
   const list = document.querySelector(".carousel-list");
  
