@@ -626,12 +626,16 @@ nav {
   
   
 }
+.landing-page-learn-more-button-div{
+  height: auto;
+}
 .landing-page-learn-more-button p{
   
   padding: 1em;
   text-decoration: none;
   color:#fff;
   font-weight: bolder;
+  
 }
 
 .landing-page-learn-more-button:link  { text-decoration: none; color: #FFF}

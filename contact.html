@@ -78,28 +78,24 @@
         <div class="contact-container">
             
             <div class="contact-form">
-                <form action="test.php">
+                <form action="https://formsubmit.co/auautogithub@email.com" method="POST">
 
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..." tabindex="1" required>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..." tabindex="2" required>
                     
 
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Your email...">
+                    <input type="email" id="email" name="email" placeholder="Your email..." tabindex="3" required>
 
 
                     <label for="inquiry">Inquiry Type</label>
-                    <select id="inquiry" name="inquirytype">
-                    <option value="sponsorship">Sponsorship</option>
-                    <option value="join">Join</option>
-                    <option value="general">General</option>
-                    </select>
+                    <input type="subject" id="subject" name="subject" placeholder="Your subject..." tabindex="4" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write something..." style="height:200px"></textarea>
+                    <textarea id="message" name="message" placeholder="Write something..." style="height:200px" tabindex="5" required></textarea>
 
                     <input type="submit" value="Submit">
 
