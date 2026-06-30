@@ -651,7 +651,7 @@ nav {
 
 .about-us-counter{
   grid-column: 1/-1;
-  padding: 3em 2em;
+  padding: 3em 0;
   background: var(--auburnOrange);
   color: #fff;
   text-align: center;
