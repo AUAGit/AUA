@@ -580,7 +580,7 @@ nav {
   align-items: center;
   align-content: center ;
   width: 100%;
-  grid-column: 3/13;
+  grid-column: 2/13;
   
 }
 
@@ -603,6 +603,7 @@ nav {
   padding-top: calc((100dvh - 90px)*0.05);
   padding-bottom: calc((100dvh - 90px)*0.05);
   width: 100%;
+  
 }
 .landing-page-learn-more-button{
   display: block;
@@ -644,10 +645,7 @@ nav {
 
 
 
-.quote{
-  display: flex;
-  grid-column: 2/14;
-}
+
 
 .about-us-counter{
   grid-column: 1/-1;
@@ -2018,9 +2016,7 @@ and (max-width : 800px) {
     font-size: 4vw;
   }
   
-  .landing-page-learn-more-button{
-    width: 100%;
-  }
+  
 }
 
 @media only screen 
