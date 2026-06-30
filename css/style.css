@@ -364,7 +364,7 @@ nav {
   height: 100%;
   align-items: center;
   align-self: center;
-  padding-top: 5dvw;
+  padding-top: 5dvh;
 
 
 }
@@ -1863,6 +1863,16 @@ and (max-width : 750px){
 
   }
 
+  .landing-header-text{
+    padding-top: 10dvh;
+  }
+  .landing-header-text h1 {
+    font-size: 8dvw;
+  }
+
+  .landing-header-text h2 {
+    font-size: 3dvw;
+  }
   
   .carousel-item {
     
