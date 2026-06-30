@@ -591,11 +591,18 @@ nav {
   padding-bottom: calc((100dvh - 90px)*0.05);
 }
 
-.landing-page-learn-more div img{
-  
+.landing-page-learn-more div img.desktop{
+  display: flex;
   height: 100%;
   width: fit-content;
 }
+
+.landing-page-learn-more div img.mobile{
+  display: none;
+  height: 100%;
+  width: fit-content;
+}
+
 
 
 .landing-page-learn-more-button-container{
@@ -1870,6 +1877,18 @@ and (max-width : 750px){
 
   .landing-header-text h2 {
     font-size: 3dvw;
+  }
+
+  .landing-page-learn-more div img.desktop{
+    display: none;
+    height: 100%;
+    width: fit-content;
+  }
+  
+  .landing-page-learn-more div img.mobile{
+    display: flex;
+    height: 100%;
+    width: fit-content;
   }
   
   .carousel-item {
