@@ -206,7 +206,7 @@ if(document.URL ==="https://auautosport.com"||document.URL ==="https://auautospo
 
     landingButton.addEventListener('click', () => {
       landingButton.classList.remove('aos-animate')
-      slowScrollTo(document.getElementById('scrollthing'), 2000,96);
+      slowScrollTo(document.getElementById('scrollthing'), 2000,90);
 
     });
   }
