@@ -32,12 +32,7 @@ window.addEventListener("load", () => {
 
 
 
-function smoothScroll(){
-  const div = document.getElementById("scrollthing");
-  div.scrollIntoView({
-      behavior: 'smooth'
-  });
-}
+
 
 /* stop animations and nav during resizing to prevent eye strain */
 let resizeTimer;
@@ -197,23 +192,6 @@ if ( document.URL.includes("gallery") && document.URL != "https://auautosport.co
   });
 }
 
-
-if(document.URL ==="https://auautosport.com"||document.URL ==="https://auautosport.com/index.html"){
-  const landingScroll = () => {
-
-    const landingButton = document.querySelector('.landing-button')
-
-
-    landingButton.addEventListener('click', () => {
-      landingButton.classList.remove('aos-animate')
-      slowScrollTo(document.getElementById('scrollthing'), 2000,90);
-
-    });
-  }
-  landingScroll();
-
-}
-
 // Custom slow scroll function
 function slowScrollTo(element, duration = 2000, offset) {
   // Get the element's position relative to the viewport
@@ -249,6 +227,23 @@ function slowScrollTo(element, duration = 2000, offset) {
   
   requestAnimationFrame(animation);
 }
+
+if(document.URL ==="https://auautosport.com"||document.URL ==="https://auautosport.com/index.html"){
+  const landingScroll = () => {
+
+    const landingButton = document.querySelector('.landing-button')
+
+
+    landingButton.addEventListener('click', () => {
+      landingButton.classList.remove('aos-animate')
+      slowScrollTo(document.getElementById('scrollthing'), 2500,90);
+
+    });
+  }
+  landingScroll();
+
+}
+
 
 
 
