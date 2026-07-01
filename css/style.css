@@ -1709,6 +1709,23 @@ a:active { text-decoration: none; }
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
   /* Styles */
+  .lead-name {
+ 
+    font-size: 5vw;
+  
+  }
+  .lead-role{
+ 
+    font-size: 3vw;
+  
+  
+  }
+  .lead-email{
+ 
+    font-size: 3vw;
+  
+  
+  }
 }
 
 
@@ -1937,18 +1954,18 @@ and (max-width : 750px){
 
   .lead-name {
  
-    font-size: 3vw;
+    font-size: 5vw;
   
   }
   .lead-role{
  
-    font-size: 2vw;
+    font-size: 3vw;
   
   
   }
   .lead-email{
  
-    font-size: 2vw;
+    font-size: 3vw;
   
   
   }
