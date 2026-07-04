@@ -1,0 +1,41 @@
+<!-- Gallery HTML Document for AU Autosports Website -->
+
+<!DOCTYPE html>
+
+<html lang="en" class="preload">
+
+<head>
+
+    {{{head}}}
+    <script>tempname(head, head)</script>
+    <script src="js/templates.js" async></script>
+    <script src="js/script.js" async></script>
+
+    <!-- Title -->
+    <title> Gallery </title> 
+    
+</head>  
+<body>
+    <div class="grid">     
+        {{{nav}}}  
+
+        <div data-aos="fade-down" data-aos-once="once" class="page-header">
+            <h1>GALLERY</h1>
+        </div>
+
+        <div class="carousel-container">
+            <ul class="carousel-list">
+                {{#each carousel}}  
+                    <li class="carousel-item wallpapers"><a class="carousel-link" href="gallery-wallpapers.html"><div class="carousel-content wallpapers"><h1>Wallpapers</h1></div></a></li>
+                {{/each}}
+            </ul>
+            <button onclick="handleClick('previous')" class="carousel-button carousel-button-previous" type="button">◄</button>
+            <button onclick="handleClick('next')" class="carousel-button carousel-button-next" type="button">►</button>
+        </div>
+      
+        {{{footer}}}
+    </div>
+    
+</body>
+
+</html>
