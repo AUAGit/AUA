@@ -1285,11 +1285,11 @@ input[type=submit]:hover {
 }
 .donor-img{
   width: 25%;
-  padding-right: 10%;
+  margin-right: 10%;
   display: flex;
   aspect-ratio: 1/1;
   object-fit: cover;
-  
+  background: white;
 }
 .donor-img img{
   width: 100%;
