@@ -1,11 +1,24 @@
 //This is just for the templates
-
+// Fetch the content from the external file
+fetch('target-file.html')
+  .then(response => response.text()) // Convert the response data stream to raw text
+  .then(htmlString => {
+    // Inject the retrieved text string into your target DOM element
+    document.getElementById('nav-template').innerHTML = htmlString;
+  })
 //func
-function compTemp(tempName, query) {
+function compTemp(tempName,tempname2, query) {
+    
     const template = Handlebars.compile(tempName);
-    const html = template(tempName);
-    document.querySelector(string(query)).
-    innerHTML = html;   
+    const html = template(tempName2);
+    document.querySelector(string(query)).innerHTML = html;   
+}
+
+function inject(template, place){
+    thing = document.getElementById(string(template)).innerHTML
+    document.querySelector(string(place)).innerHTML = thing; 
+
+    
 }
 
 
@@ -15,7 +28,28 @@ function compTemp(tempName, query) {
 const head2 ='<!-- humans.txt --> <link rel="author" href="humans.txt"/><!-- Stylehseets --><link rel="stylesheet" href="https://use.typekit.net/jmr5lxu.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"><link rel="stylesheet" href="css/style.css"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!-- Meta Tags --><meta charset="UTF-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"><meta name="descripton" content="Gallery"><!-- Favicon --><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="shortcut icon" href="/favicon.ico" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><meta name="apple-mobile-web-app-title" content="AUA" /><link rel="manifest" href="/site.webmanifest" /><!-- JS Summons (DO NOT USE LOCAL CALLS) --><script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>'
 //Nav Template
 
+
+const nav2 = {nav2: "<p>hi</p>"};
+
+const carousel = {
+    title: "poop",
+    items: [
+        {
+            class1 : '<div class="carousel-content wallpapers"></div>',
+            photo : 'assets/placeholders/pxfuel.jpg',
+            class2 : '<li class="carousel-item wallpapers">',
+            class3: '"carousel-link"',
+            name : "wallpapers"
+        }
+
+    ]
+    
+}
+
+
 /*
+
+
 <nav>
     <div class="nav-container">
         <div class="nav-logo">
