@@ -1295,7 +1295,7 @@ input[type=submit]:hover {
   width: 100%;
   height: fit-content;
   display: flex;
-  aspect-ratio: 1/1;
+ 
   align-self: center;
 }
 
@@ -1305,6 +1305,7 @@ input[type=submit]:hover {
 
 .donor-text{
   width: 65%;
+  align-content: center;
 }
 .donor-spacer{
   width: 100%;
