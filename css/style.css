@@ -2001,6 +2001,13 @@ and (max-width : 750px){
     text-align: center;
   }
  
+
+
+  .who-are-we,.teamwork-makes-the-dreamwork{
+    display: block;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+  }
   
 }
 
