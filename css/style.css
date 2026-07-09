@@ -1995,7 +1995,7 @@ and (max-width : 750px){
   .donor-img{
     width: 50%;
     padding-bottom: 10%;
-    padding-right: 0;
+    margin-right: 0;
   }
   .donor-text{
     text-align: center;
