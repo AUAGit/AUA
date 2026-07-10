@@ -834,18 +834,18 @@ nav {
 }
 
 .carousel-content.wallpapers{
+  background-image: url("../assets/gallery/wallpapers/8.jpg");
+  background-size:cover;
+  background-position: center;
+}
+
+.carousel-content.g2026-27{
   background-image: url("../assets/placeholders/pxfuel.jpg");
   background-size:cover;
   background-position: center;
 }
 
-.carousel-content.g2026{
-  background-image: url("../assets/placeholders/pxfuel.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
-.carousel-content.g2025{
+.carousel-content.g2025-26{
   background-image: url("../assets/placeholders/pxfuel.jpg");
   background-size:cover;
   background-position: center;
