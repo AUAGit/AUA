@@ -645,7 +645,7 @@ nav {
 
 /* About us Page Style */
 .page-header.about-us{
-  background-image: url("../assets/about/header.jpg");
+  background-image: url("../assets/about/header.JPG");
   grid-column: 1/-1;
   height: calc(100dvh - 90px - 2em) !important;
   background-position: center;
