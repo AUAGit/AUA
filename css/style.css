@@ -574,7 +574,7 @@ nav {
 }
 
 .landing-page-learn-more div{
-
+  color: var(--mainTextColor);
   display: flex;
   place-content: center;
   align-items: center;
@@ -768,8 +768,57 @@ nav {
 }
 
 .about-car-container{
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  column-gap: 20px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  
+}
+
+
+
+.about-car-container>h1{
+  grid-column: 1/-1;
+  text-align: center;
+  
+}
+
+.car-title{
+  text-align: left;
+}
+.car-container{
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1em;
 
 }
+.car-img{
+  width: 45%;
+  margin-left: 10%;
+  display: flex;
+  
+  object-fit: cover;
+  
+}
+.car-img img{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+ 
+  align-self: center;
+}
+
+.car-button a:link,.car-button a:visited{
+  color: var(--auburnOrange);
+}
+
+.car-text{
+  width: 45%;
+  align-content: center;
+}
+
 
 .about-officers-container{
 
@@ -1251,14 +1300,16 @@ input[type=submit]:hover {
 
 
 
+
 .donor-tier-container{
   grid-column: 2/14;
   display: flex;
   align-items: center;
   place-content: center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+  color: var(--mainTextColor);
   
 }
 
@@ -1268,6 +1319,47 @@ input[type=submit]:hover {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+
+.donate-button-container{
+ 
+  padding-top: calc((100dvh - 90px)*0.05);
+  padding-bottom: calc((100dvh - 90px)*0.05);
+  width: 100%;
+  place-content: center;
+  
+  display: flex;
+  
+}
+.donate-button{
+  display: block;
+  background-color: #e86100;
+  border-radius: 1em;
+  width: 25dvw;
+  grid-column: 3/13;
+  place-self: center;
+  font-family: "sweet-sans-pro", sans-serif;
+  text-align: center;
+  
+  letter-spacing: 2px;
+  
+  
+}
+.donate-button-div{
+  height: auto;
+}
+.donate-button p{
+  
+  padding: 1em;
+  text-decoration: none;
+  color:#fff;
+  font-weight: bolder;
+  
+}
+
+.donate-button:link  { text-decoration: none; color: #FFF}
+.donate-button:visited  { text-decoration: none; color: #FFF;}
+.donate-button:hover  { text-decoration: none;  color: #FFF; transform:scale(110%); transition: .25s ease; }
+
 .our-donors{
   grid-column: 2/14;
   display: flex;
@@ -1276,6 +1368,7 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+  color: var(--mainTextColor);
 }
 .donor-container{
   display: flex;
@@ -1306,6 +1399,7 @@ input[type=submit]:hover {
 .donor-text{
   width: 65%;
   align-content: center;
+  color: var(--mainTextColor);
 }
 .donor-spacer{
   width: 100%;
