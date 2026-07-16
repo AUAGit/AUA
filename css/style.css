@@ -811,6 +811,18 @@ nav {
   align-self: center;
 }
 
+.car-button{
+  width: fit-content;
+
+}
+.car-button div{
+  padding: 1em;
+  background-color: #e86100;
+  color: white;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
 .car-button a:link,.car-button a:visited{
   color: var(--auburnOrange);
 }
@@ -2081,7 +2093,7 @@ and (max-width : 750px){
   
   
   }
-  
+   
 
   .donor-container{
     align-items: center;
