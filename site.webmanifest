@@ -1,5 +1,5 @@
 {
-  "name": "Auburn University Autosport",
+  "name": "AUAutosport",
   "short_name": "AUA",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#e86100",
+  "theme_color": "#e86100",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
