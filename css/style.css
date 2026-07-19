@@ -761,8 +761,10 @@ nav {
 }
 
 .about-engineering-container{
-
+  height: calc(100vh - 90px);
 }
+
+
 
 .about-business-container{
 
@@ -832,9 +834,65 @@ nav {
   align-content: center;
 }
 
-
 .about-officers-container{
+  text-align: center;
+}
+.pphotos{
+  height: calc(100vh - 90px);
 
+}
+.officer{
+  height: 15%;
+  margin-bottom: 2.5%;
+  display: flex;
+  place-content: center;
+  justify-content: space-evenly;
+}
+
+.person{
+  
+  aspect-ratio: 1/1;
+  height: 100%;
+  display: flex;
+  border-radius: 50%;
+  
+  
+}
+
+.the-rest img.person{
+  height: 25%;
+}
+
+.sub-officer{
+  height: 10%;
+  margin-bottom: 2.5%;
+  display: flex;
+  place-content: center;
+  
+}
+
+.auto{
+  width: 45%;
+  margin-right: 5%;
+  display: flex;
+  place-content: center;
+  justify-content: space-evenly;
+}
+.busi{
+  width: 45%;
+  margin-left: 5%;
+  display: flex;
+  place-content: center;
+  justify-content: space-evenly;
+}
+
+
+.the-rest{
+  height: 25%;
+  display: flex;
+  place-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 
