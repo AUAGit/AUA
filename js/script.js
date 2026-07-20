@@ -101,7 +101,7 @@ const modeToggle = () => {
   
   /* check if user has dark mode preference and set theme accordingly on page load */
   if (checkDarkPreferred() ) {
-    if (localStorage.getItem("beenToggled") == "false" || false){
+    if (localStorage.getItem("beenToggled") != "true"){
       /* set dark mode active classes and icons on page load if user has dark mode preference */
       html.classList.add('dark');
       themeToggle.classList.add('theme-active','theme-scale');
