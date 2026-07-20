@@ -144,7 +144,7 @@ const modeToggle = () => {
     localStorage.setItem("beenToggled","true")
     beenToggled = localStorage.getItem("beenToggled")
     if (localStorage.getItem("mode") == "dark"){
-      localStorage.setItem("mode","light")
+      
         themeToggle.classList.remove('theme-active');
       setTimeout(() => {
         
@@ -164,9 +164,10 @@ const modeToggle = () => {
         
 
       }, 0); 
+      localStorage.setItem("mode","light")
     }
     if (localStorage.getItem("mode") == "light"){
-      localStorage.setItem("mode","dark")
+      
         themeToggle.classList.add('theme-active');
       setTimeout(() => {
         
@@ -186,6 +187,7 @@ const modeToggle = () => {
         }
 
       }, 0); 
+      localStorage.setItem("mode","dark")
     }
     
 
