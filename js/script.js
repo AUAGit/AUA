@@ -96,12 +96,12 @@ const modeToggle = () => {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
-  var beenToggled =  localStorage.getItem("beenToggled");
+  const beenToggled =  localStorage.getItem("beenToggled");
  
   
   /* check if user has dark mode preference and set theme accordingly on page load */
   if (checkDarkPreferred() ) {
-    if (beenToggled = "false"){
+    if (beenToggled == "false" || false){
       /* set dark mode active classes and icons on page load if user has dark mode preference */
       html.classList.add('dark');
       themeToggle.classList.add('theme-active','theme-scale');
