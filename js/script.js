@@ -116,6 +116,24 @@ const modeToggle = () => {
     }
   }
 
+  if (!checkDarkPreferred() ) {
+    if (localStorage.getItem("beenToggled") != "true"){
+      /* set dark mode active classes and icons on page load if user has dark mode preference */
+      html.classList.remove('dark');
+      themeToggle.classList.remove('theme-active','theme-scale');
+      document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
+      document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+      document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+      if ( document.URL.includes("contact.html") ) {
+        document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
+        document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+        document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+      }
+    }
+  }
+
+
+
 
   /* toggle theme and animate theme toggle button */
   themeToggle.addEventListener('click', () => {
