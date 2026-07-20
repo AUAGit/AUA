@@ -101,7 +101,7 @@ const modeToggle = () => {
   
   /* check if user has dark mode preference and set theme accordingly on page load */
   if (checkDarkPreferred() ) {
-    if (beenToggled == "false" || false){
+    if (localStorage.getItem("beenToggled") == "false" || false){
       /* set dark mode active classes and icons on page load if user has dark mode preference */
       html.classList.add('dark');
       themeToggle.classList.add('theme-active','theme-scale');
@@ -120,9 +120,10 @@ const modeToggle = () => {
   /* toggle theme and animate theme toggle button */
   themeToggle.addEventListener('click', () => {
     
-    if (beenToggled = "false" || false){
-      localStorage.setItem("beenToggled","true")
-    }  
+    
+    localStorage.setItem("beenToggled","true")
+    beenToggled = localStorage.getItem("beenToggled")
+   
     themeToggle.classList.toggle('theme-active');
     setTimeout(() => {
       
