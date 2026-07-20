@@ -96,7 +96,7 @@ const modeToggle = () => {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
-  var keepTheme =  localStorage.getItem("keepTheme");
+  var beenToggled =  localStorage.getItem("beenToggled");
  
   
   /* check if user has dark mode preference and set theme accordingly on page load */
@@ -119,7 +119,9 @@ const modeToggle = () => {
   /* toggle theme and animate theme toggle button */
   themeToggle.addEventListener('click', () => {
     
-      
+    if (beenToggled = "false" || false){
+      localStorage.setItem("beenToggled","true")
+    }  
     themeToggle.classList.toggle('theme-active');
     setTimeout(() => {
       
