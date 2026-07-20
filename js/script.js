@@ -116,7 +116,7 @@ const modeToggle = () => {
     }
   }
 
-  if (!checkDarkPreferred() ) {
+  if (checkDarkPreferred() == false) {
     if (localStorage.getItem("beenToggled") != "true"){
       /* set dark mode active classes and icons on page load if user has dark mode preference */
       html.classList.remove('dark');
