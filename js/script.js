@@ -101,17 +101,18 @@ const modeToggle = () => {
   
   /* check if user has dark mode preference and set theme accordingly on page load */
   if (checkDarkPreferred() ) {
-
-    /* set dark mode active classes and icons on page load if user has dark mode preference */
-    html.classList.add('dark');
-    themeToggle.classList.add('theme-active','theme-scale');
-    document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
-    document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-    document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-    if ( document.URL.includes("contact.html") ) {
-      document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
-      document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-      document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+    if (beenToggled = "false"){
+      /* set dark mode active classes and icons on page load if user has dark mode preference */
+      html.classList.add('dark');
+      themeToggle.classList.add('theme-active','theme-scale');
+      document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
+      document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+      document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+      if ( document.URL.includes("contact.html") ) {
+        document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
+        document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+        document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+      }
     }
   }
 
