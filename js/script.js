@@ -96,7 +96,7 @@ const modeToggle = () => {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
-  const beenToggled =  localStorage.getItem("beenToggled");
+  let beenToggled =  localStorage.getItem("beenToggled");
  
   
   /* check if user has dark mode preference and set theme accordingly on page load */
