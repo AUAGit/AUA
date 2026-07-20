@@ -108,10 +108,11 @@ const modeToggle = () => {
     document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
     document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
     document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-    document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
-    document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-    document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-    
+    if ( document.URL.includes("contact.html") ) {
+      document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
+      document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+      document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+    }
   }
 
 
