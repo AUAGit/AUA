@@ -98,7 +98,7 @@ const modeToggle = () => {
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
   /*detect default*/
-  if (checkDarkPreferred() ) {
+  if (checkDarkPreferred() && (localStorage.getItem("toggled") != "true") ) {
     localStorage.setItem("defaultState","d")
     localStorage.setItem("currentState","dark")
   }else{
