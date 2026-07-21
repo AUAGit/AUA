@@ -170,7 +170,7 @@ const modeToggle = () => {
       
       
     
-      if (localStorage.getItem("currentState") == "light"){
+      if (localStorage.getItem("currentState") == "dark"){
         
         themeToggle.classList.add('theme-active');
     
@@ -193,7 +193,7 @@ const modeToggle = () => {
         }, 125);
       }
 
-      if (localStorage.getItem("currentState") == "dark"){
+      if (localStorage.getItem("currentState") == "light"){
         
         themeToggle.classList.remove('theme-active');
     
