@@ -99,8 +99,10 @@ const modeToggle = () => {
   /*detect default*/
   if (checkDarkPreferred() ) {
     localStorage.setItem("defaultState","d")
+    localStorage.setItem("currentState","dark")
   }else{
     localStorage.setItem("defaultState","l")
+    localStorage.setItem("currentState","light")
   }
 
   if ((localStorage.getItem("toggled") != "true") && localStorage.getItem("defaultState") == "d"){
@@ -127,7 +129,7 @@ const modeToggle = () => {
 
   themeToggle.addEventListener('click', () => {
     localStorage.setItem("toggled","true")
-    if(localStorage.getItem("currentState") =="dark"){
+    if(localStorage.getItem("currentState") == "dark"){
       localStorage.setItem("currentState","light")
     }else if (localStorage.getItem("currentState") == "light"){
       localStorage.setItem("currentState","dark")
