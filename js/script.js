@@ -106,7 +106,7 @@ const modeToggle = () => {
   if ((localStorage.getItem("toggled") != "true") && localStorage.getItem("defaultState") == "d"){
     
     setTimeout(() => {
-      
+      themeToggle.classList.add('theme-active');
       themeToggle.classList.add('theme-scale');
       html.classList.add('dark');
       
@@ -126,13 +126,14 @@ const modeToggle = () => {
   }
 
   themeToggle.addEventListener('click', () => {
-    themeToggle.classList.toggle('theme-active');
     localStorage.setItem("toggled","true")
     if(localStorage.getItem("currentState") =="dark"){
       localStorage.setItem("currentState","light")
     }else if (localStorage.getItem("currentState") == "light"){
       localStorage.setItem("currentState","dark")
     }
+    themeToggle.classList.toggle('theme-active');
+    
    
     setTimeout(() => {
       
@@ -159,8 +160,7 @@ const modeToggle = () => {
     
     setTimeout(() => {
       
-      themeToggle.classList.add('theme-scale');
-      html.classList.add('dark');
+      
       
       /* toggle social media icons between light and dark versions */
       
@@ -181,8 +181,7 @@ const modeToggle = () => {
     
     setTimeout(() => {
       
-      themeToggle.classList.remove('theme-scale');
-      html.classList.remove('dark');
+     
       
       /* toggle social media icons between light and dark versions */
       
