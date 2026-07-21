@@ -98,14 +98,15 @@ const modeToggle = () => {
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
   /*detect default*/
-  if (checkDarkPreferred() && (localStorage.getItem("toggled") != "true") ) {
-    localStorage.setItem("defaultState","d")
-    localStorage.setItem("currentState","dark")
-  }else{
-    localStorage.setItem("defaultState","l")
-    localStorage.setItem("currentState","light")
+  if (localStorage.getItem("toggled") != "true"){
+    if (checkDarkPreferred() ) {
+      localStorage.setItem("defaultState","d")
+      localStorage.setItem("currentState","dark")
+    }else{
+      localStorage.setItem("defaultState","l")
+      localStorage.setItem("currentState","light")
+    }
   }
-
   if ((localStorage.getItem("toggled") != "true") && localStorage.getItem("defaultState") == "d"){
     
     setTimeout(() => {
