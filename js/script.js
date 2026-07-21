@@ -163,21 +163,14 @@ const modeToggle = () => {
     }, 125);
 
   });
-  window.addEventListener('onbeforeunload', ()=>{
+  window.addEventListener('beforeunload', () => {
 
 
   
     if (localStorage.getItem("currentState") == "dark"){
       
       themeToggle.classList.toggle('theme-active');
-    
-
-
-
-   
-
-
-   
+  
       setTimeout(() => {
       
       themeToggle.classList.toggle('theme-scale');
@@ -217,6 +210,7 @@ const modeToggle = () => {
 
       }, 125); 
     }
+    
   });
 
 }
