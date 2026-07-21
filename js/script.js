@@ -175,11 +175,6 @@ const modeToggle = () => {
   });
   if (localStorage.getItem("toggled") == "true"){
    window.addEventListener("DOMContentLoaded", () => {
-   
-
-      
-      
-    
       if (localStorage.getItem("currentState") == "dark"){
         
         themeToggle.classList.add('theme-active');
