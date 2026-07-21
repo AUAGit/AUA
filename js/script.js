@@ -91,94 +91,95 @@ navSlide();
 
 
 /* theme toggle and dark mode support */
-const modeToggle = () => {
 
+const modeToggle = () => {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
-  let beenToggled =  localStorage.getItem("beenToggled");
- 
-  
-  /* check if user has dark mode preference and set theme accordingly on page load */
+  /*detect default*/
   if (checkDarkPreferred() ) {
-    if (localStorage.getItem("beenToggled") != "true"){
-      /* set dark mode active classes and icons on page load if user has dark mode preference */
+    localStorage.setItem("defaultState","d")
+  }else{
+    localStorage.setItem("defaultState","l")
+  }
+
+  if ((localStorage.getItem("toggled") != "true") && localStorage.getItem("defaultState") == "d"){
+    themeToggle.classList.add('theme-active');
+    setTimeout(() => {
+      
+      themeToggle.classList.add('theme-scale');
       html.classList.add('dark');
-      themeToggle.classList.add('theme-active','theme-scale');
-      document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
-      document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-      document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-      if ( document.URL.includes("contact.html") ) {
-        document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg"; 
-        document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-        document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-      }
-      localStorage.setItem("mode", "dark")
-    }
-  }
-  else{
-    localStorage.setItem("mode", "light")
-  }
-  
-
-  
-
-
-
-
-  /* toggle theme and animate theme toggle button */
-  themeToggle.addEventListener('click', () => {
-    localStorage.setItem("beenToggled","true")
-    beenToggled = localStorage.getItem("beenToggled")
-    if (localStorage.getItem("mode") == "dark"){
       
-        themeToggle.classList.remove('theme-active');
-      setTimeout(() => {
-        
-        themeToggle.classList.remove('theme-scale');
-        html.classList.remove('dark');
-        
-        /* toggle social media icons between light and dark versions */
-        
-          document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_blue_outline.svg";
-          document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_blue_outline.svg";
-          document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_blue_outline.svg";
-          if ( document.URL.includes("contact.html") ) {
-            document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_blue_outline.svg";
-            document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_blue_outline.svg";
-            document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_blue_outline.svg";
-          }
-        
-
-      }, 0); 
-      localStorage.setItem("mode","light")
-    }
-    if (localStorage.getItem("mode") == "light"){
+      /* toggle social media icons between light and dark versions */
       
-        themeToggle.classList.add('theme-active');
-      setTimeout(() => {
-        
-        themeToggle.classList.add('theme-scale');
-        html.classList.add('dark');
-        
-        /* toggle social media icons between light and dark versions */
-        if (document.getElementById("icon-i").src == "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_blue_outline.svg"){
-          document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
-          document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-          document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-          if ( document.URL.includes("contact.html") ) {
-            document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
-            document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
-            document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
-          }
+        document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
+        document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+        document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+        if ( document.URL.includes("contact.html") ) {
+          document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
+          document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+          document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
         }
+      
 
-      }, 0); 
-      localStorage.setItem("mode","dark")
-    }
+    }, 150); 
+  }
+
+  themeToggle.addEventListener('click', () => {
     
+    localStorage.setItem("toggled","true")
+    if(localStorage.getItem("currentState") =="dark"){
+      localStorage.setItem("currentState","light")
+    }else if (localStorage.getItem("currentState") == "light"){
+      localStorage.setItem("currentState","dark")
+    }
+   
 
   });
+
+  if (localStorage.getItem("currentState") == "dark"){
+    themeToggle.classList.add('theme-active');
+    setTimeout(() => {
+      
+      themeToggle.classList.add('theme-scale');
+      html.classList.add('dark');
+      
+      /* toggle social media icons between light and dark versions */
+      
+        document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
+        document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+        document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+        if ( document.URL.includes("contact.html") ) {
+          document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_white_outline.svg";
+          document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_white_outline.svg";
+          document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
+        }
+      
+
+    }, 150); 
+  }
+
+  if (localStorage.getItem("currentState") == "light"){
+    themeToggle.classList.remove('theme-active');
+    setTimeout(() => {
+      
+      themeToggle.classList.remove('theme-scale');
+      html.classList.remove('dark');
+      
+      /* toggle social media icons between light and dark versions */
+      
+        document.getElementById("icon-i").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_blue_outline.svg";
+        document.getElementById("icon-f").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_blue_outline.svg";
+        document.getElementById("icon-l").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_blue_outline.svg";
+        if ( document.URL.includes("contact.html") ) {
+          document.getElementById("icon-is").src = "https://cdn.auburn.edu/assets/icons/social_media/instagram/instagram_blue_outline.svg";
+          document.getElementById("icon-fs").src = "https://cdn.auburn.edu/assets/icons/social_media/facebook/facebook_blue_outline.svg";
+          document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_blue_outline.svg";
+        }
+      
+
+    }, 150); 
+  }
 
 }
 modeToggle();
