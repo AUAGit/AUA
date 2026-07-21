@@ -93,6 +93,7 @@ navSlide();
 /* theme toggle and dark mode support */
 
 const modeToggle = () => {
+  console.log(localStorage);
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
