@@ -164,7 +164,7 @@ const modeToggle = () => {
 
   });
   if (localStorage.getItem("toggled") == "true"){
-   window.addEventListener('beforeunload', () => {
+   window.addEventListener('onbeforeunload', () => {
    
 
       
