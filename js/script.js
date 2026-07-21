@@ -163,8 +163,9 @@ const modeToggle = () => {
     }, 125);
 
   });
+  if (localStorage.getItem("toggled") == "true"){
    window.addEventListener('beforeunload', () => {
-    if (localStorage.getItem("toggled") == "true"){
+   
 
       
       
@@ -212,9 +213,9 @@ const modeToggle = () => {
 
         }, 125); 
       }
-    }
-  });
-
+    
+    });
+  }    
 }
 modeToggle();
 
