@@ -134,6 +134,12 @@ const modeToggle = () => {
     }
     themeToggle.classList.toggle('theme-active');
     
+
+
+
+    console.log(localStorage);
+
+
    
     setTimeout(() => {
       
