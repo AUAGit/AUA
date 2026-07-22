@@ -65,7 +65,7 @@ const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-pages');
   const bodyscroll = document.querySelector('body');
-  if (window.screen.availWidth > 749){
+  if (window.screen.availWidth < 750){
     burger.addEventListener('click', () => {
 
       /* toggle nav active classes with staggered timing for animation */
