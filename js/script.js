@@ -86,7 +86,6 @@ navSlide();
 
 
 
-
 /* theme toggle and dark mode support */
 
 const modeToggle = () => {
