@@ -122,7 +122,7 @@ const modeToggle = () => {
         }
       
 
-    }, 150); 
+    },0); 
   }
 
   themeToggle.addEventListener('click', () => {
@@ -153,7 +153,7 @@ const modeToggle = () => {
         document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
       }
     
-      }, 125);
+      }, 0);
     }
 
     if (localStorage.getItem("currentState") == "light"){
@@ -175,7 +175,7 @@ const modeToggle = () => {
         }
       
 
-      }, 125); 
+      }, 0); 
     }
   });
   if (localStorage.getItem("toggled") == "true"){
@@ -200,7 +200,7 @@ const modeToggle = () => {
           document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
         }
       
-        }, 125);
+        }, 0);
       }
 
       if (localStorage.getItem("currentState") == "light"){
@@ -222,7 +222,7 @@ const modeToggle = () => {
           }
         
 
-        }, 125); 
+        }, 0); 
       }
     
     });
