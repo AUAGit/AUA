@@ -133,6 +133,7 @@ const modeToggle = () => {
       localStorage.setItem("currentState","dark")
     }
 
+    console.log(localStorage);
     if (localStorage.getItem("currentState") == "dark"){
         
       themeToggle.classList.add('theme-active');
