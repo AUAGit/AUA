@@ -14,10 +14,10 @@
 
 
 /* disable animations until page is fully loaded to prevent eye strain */
-/*const html = document.querySelector('html');
+const html = document.querySelector('html');
 window.addEventListener("load", () => {
   html.classList.remove("preload");
-});*/
+});
 
 
 // init AOS animation
