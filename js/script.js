@@ -15,13 +15,13 @@
 
 /* disable animations until page is fully loaded to prevent eye strain */
 const html = document.querySelector('html');
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   html.classList.remove("preload");
 });
 
 
 // init AOS animation
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     AOS.init({
       duration: 1250, 
     });
@@ -180,7 +180,7 @@ const modeToggle = () => {
     }
   });
   if (localStorage.getItem("toggled") == "true"){
-   window.addEventListener("DOMContentLoaded", () => {
+   window.addEventListener("load", () => {
       if (localStorage.getItem("currentState") == "dark"){
         
         themeToggle.classList.add('theme-active');
