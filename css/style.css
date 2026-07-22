@@ -1893,6 +1893,7 @@ and (max-device-width : 480px) {
   
   
   }
+ 
 }
 
 
@@ -1915,7 +1916,9 @@ and (max-width : 480px){
 
   }
 
-  
+  .donate-button p {
+    font-size: x-small;
+  }
 
   .photocontainer {
     width: 100%;
