@@ -244,7 +244,7 @@ if (document.URL == "https://auautosport.com/gallery.html") {
 }
 
 
-if ( document.URL.includes("gallery") && document.URL != "https://auautosport.com/gallery.html" ) {
+if ( document.URL.includes("gallery") && (document.URL != "https://auautosport.com/gallery.html" || document.URL != "https://auautosport.com/gallery") ) {
   // init Masonry
   var $grid = $('.photogrid').masonry({
     itemSelector: '.photocontainer', 
