@@ -133,7 +133,7 @@ const modeToggle = () => {
     }else if (localStorage.getItem("currentState") == "light"){
       localStorage.setItem("currentState","dark")
     }
-    themeToggle.classList.toggle('theme-active');
+    /*themeToggle.classList.toggle('theme-active');
     
 
 
@@ -168,7 +168,7 @@ const modeToggle = () => {
       }
     
     }, 125);
-
+    */
   });
   if (localStorage.getItem("toggled") == "true"){
    window.addEventListener("DOMContentLoaded", () => {
