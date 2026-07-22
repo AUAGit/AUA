@@ -43,11 +43,8 @@ window.addEventListener("resize", () => {
   const bodyscroll = document.querySelector('body')
 
   /* remove nav active classes and noscroll when resizing to prevent nav still being open */
-  if (window.screen.availWidth > 680){
-    nav.classList.remove('nav-active-1'); 
-    nav.classList.remove('nav-active-2'); 
-    nav.classList.remove('nav-active-3'); 
-    nav.classList.remove('nav-active-4'); 
+  if (window.screen.availWidth > 749){
+    nav.classList.remove('nav-active'); 
     bodyscroll.classList.remove('no-scroll');
     burger.classList.remove('toggle');
   }
@@ -64,26 +61,26 @@ window.addEventListener("resize", () => {
 
 /* nav animation and toggle */
 const navSlide = () => {
-
+  
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-pages');
   const bodyscroll = document.querySelector('body');
+  if (window.screen.availWidth > 749){
+    burger.addEventListener('click', () => {
 
-  burger.addEventListener('click', () => {
+      /* toggle nav active classes with staggered timing for animation */
+      setTimeout(() => {
+        nav.classList.toggle('nav-active');
+      }, 0);
+      
+      /* toggle noscroll on body to prevent scrolling when nav is open */
+      bodyscroll.classList.toggle('no-scroll');
 
-    /* toggle nav active classes with staggered timing for animation */
-    setTimeout(() => {
-      nav.classList.toggle('nav-active');
-    }, 0);
-    
-    /* toggle noscroll on body to prevent scrolling when nav is open */
-    bodyscroll.classList.toggle('no-scroll');
-
-    /* toggle burger animation */
-    burger.classList.toggle('toggle');
-    
-  });  
-
+      /* toggle burger animation */
+      burger.classList.toggle('toggle');
+      
+    });  
+  }
 }
 navSlide();
 
