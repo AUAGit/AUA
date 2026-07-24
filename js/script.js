@@ -180,7 +180,7 @@ const modeToggle = () => {
     }
   });
   if (localStorage.getItem("toggled") == "true"){
-   window.addEventListener("load", () => {
+   /*window.addEventListener("load", () => {*/
       if (localStorage.getItem("currentState") == "dark"){
         
         themeToggle.classList.add('theme-active');
@@ -226,7 +226,7 @@ const modeToggle = () => {
         }, 125); 
       }
     
-    });
+    /*});*/
   }    
 }
 modeToggle();
