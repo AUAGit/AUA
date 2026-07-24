@@ -89,7 +89,7 @@ navSlide();
 /* theme toggle and dark mode support */
 
 const modeToggle = () => {
-  
+  console.log(localStorage);
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.querySelector('html');
   const checkDarkPreferred = () => window?.matchMedia?.('(prefers-color-scheme:dark)')?.matches ?? false;
@@ -133,7 +133,7 @@ const modeToggle = () => {
       localStorage.setItem("currentState","dark")
     }
 
-    
+    console.log(localStorage);
     if (localStorage.getItem("currentState") == "dark"){
         
       themeToggle.classList.add('theme-active');
@@ -180,7 +180,7 @@ const modeToggle = () => {
     }
   });
   if (localStorage.getItem("toggled") == "true"){
-   /*window.addEventListener("load", () => {*/
+   window.addEventListener("load", () => {
       if (localStorage.getItem("currentState") == "dark"){
         
         themeToggle.classList.add('theme-active');
@@ -201,7 +201,7 @@ const modeToggle = () => {
           document.getElementById("icon-ls").src = "https://cdn.auburn.edu/assets/icons/social_media/linkedin/linkedin_white_outline.svg";
         }
       
-        }, 0);
+        }, 125);
       }
 
       if (localStorage.getItem("currentState") == "light"){
@@ -223,10 +223,10 @@ const modeToggle = () => {
           }
         
 
-        }, 0); 
+        }, 125); 
       }
     
-    /*});*/
+    });
   }    
 }
 modeToggle();
