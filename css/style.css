@@ -1547,7 +1547,7 @@ footer {
   justify-content: center;
   margin: 0;
   padding: 1em;
-  width: 400px;
+  width: 150px;
   user-select:none;
 
 }
@@ -1930,7 +1930,7 @@ and (max-width : 480px){
 
   .ft-logo img {
    
-    width: 300px;
+    width: 100px;
   
   }
 
