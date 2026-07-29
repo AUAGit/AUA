@@ -88,7 +88,7 @@ nav {
   top: 0;
   width: 100%;
   z-index: 300;
-  height: 90px;
+  height: 70px;
 }
 
 .nav-container { 
@@ -98,7 +98,7 @@ nav {
   display: flex; 
   grid-column: 2/14;
   justify-content: space-between;
-  height: 90px;
+  height: 70px;
   position: sticky;
   top: 0;
   
@@ -318,7 +318,7 @@ nav {
 .landing-header-container {
 
   grid-column: -1/1;
-  height: calc(100dvh - 90px) !important;
+  height: calc(100dvh - 70px) !important;
 
 }
 
@@ -543,7 +543,7 @@ nav {
   display: flex;
   background: var(--mainPageColor);
   background: linear-gradient(180deg, var(--mainPageColorT) 0%, var(--mainPageColor) 100%);
-  height: calc(100dvh - 90px);
+  height: calc(100dvh - 70px);
   width: 100%;
   grid-column: 1/-1;
 }
@@ -551,8 +551,8 @@ nav {
 .landing-page-learn-more-header-container{
   height: 15%;
   width: 100%;
-  padding-top: calc((100dvh - 90px)*0.05);
-  padding-bottom: calc((100dvh - 90px)*0.05);
+  padding-top: calc((100dvh - 70px)*0.05);
+  padding-bottom: calc((100dvh - 70px)*0.05);
 }
 .page-header.learn-more{
   text-wrap: nowrap;
@@ -565,7 +565,7 @@ nav {
 
 
 .landing-page-learn-more{
-  height: calc(100dvh - 90px);
+  height: calc(100dvh - 70px);
   background-color: var(--mainPageColor);
   grid-column: 1/-1;
   display: flex;
@@ -587,8 +587,8 @@ nav {
 .landing-page-learn-more-pic-container{
   height: 40%;
   width: 100%;
-  padding-top: calc((100dvh - 90px)*0.05);
-  padding-bottom: calc((100dvh - 90px)*0.05);
+  padding-top: calc((100dvh - 70px)*0.05);
+  padding-bottom: calc((100dvh - 70px)*0.05);
 }
 
 .landing-page-learn-more div img.desktop{
@@ -607,8 +607,8 @@ nav {
 
 .landing-page-learn-more-button-container{
   height: 15%;
-  padding-top: calc((100dvh - 90px)*0.05);
-  padding-bottom: calc((100dvh - 90px)*0.05);
+  padding-top: calc((100dvh - 70px)*0.05);
+  padding-bottom: calc((100dvh - 70px)*0.05);
   width: 100%;
   
 }
@@ -647,7 +647,7 @@ nav {
 .page-header.about-us{
   background-image: url("../assets/about/header.JPG");
   grid-column: 1/-1;
-  height: calc(100dvh - 90px - 2em) !important;
+  height: calc(100dvh - 70px - 2em) !important;
   background-position: center;
   background-size: cover;
   color: #FFF;
@@ -838,7 +838,7 @@ nav {
   text-align: center;
 }
 .pphotos{
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
 
 }
 .officer{
@@ -912,7 +912,7 @@ nav {
   grid-column: 2/14;
   
    
-  height: calc(100vh - 90px - 4em);
+  height: calc(100vh - 70px - 4em);
 
    
     
@@ -933,7 +933,7 @@ nav {
 .carousel-item {
   flex-shrink: 0;
   width: 80%;
-  height: calc(100vh - 90px - 4em);
+  height: calc(100vh - 70px - 4em);
 
   background-color: #FFF;
 
@@ -1394,8 +1394,8 @@ input[type=submit]:hover {
 
 .donate-button-container{
  
-  padding-top: calc((100dvh - 90px)*0.05);
-  padding-bottom: calc((100dvh - 90px)*0.05);
+  padding-top: calc((100dvh - 70px)*0.05);
+  padding-bottom: calc((100dvh - 70px)*0.05);
   width: 100%;
   place-content: center;
   
@@ -2015,11 +2015,11 @@ and (max-width : 750px){
     background-color: var(--mainPageColor);
     display: block;
     flex-direction: column;
-    height: calc(100dvh - 90px);
+    height: calc(100dvh - 70px);
     justify-content: space-evenly;
     position: absolute;
     right: 0px;
-    top:  calc(90px);
+    top:  calc(70px);
     width: 100dvw;
     z-index: 10;
     padding-bottom: 1em;
@@ -2056,7 +2056,7 @@ and (max-width : 750px){
 
   .header-img {
 
-    height: calc(100dvh - 90px) !important;
+    height: calc(100dvh - 70px) !important;
 
   }
 
@@ -2085,9 +2085,9 @@ and (max-width : 750px){
   
   .carousel-item {
     
-    height: calc(80vh - 90px - 4em);
-    margin-top: calc(((100vh - 90px - 4em) - (80vh - 90px - 4em)) / 2) ;
-    margin-bottom: calc(((100vh - 90px - 4em) - (80vh - 90px - 4em)) / 2)  ;
+    height: calc(80vh - 70px - 4em);
+    margin-top: calc(((100vh - 70px - 4em) - (80vh - 70px - 4em)) / 2) ;
+    margin-bottom: calc(((100vh - 70px - 4em) - (80vh - 70px - 4em)) / 2)  ;
     
   }
 
